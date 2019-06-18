@@ -1,0 +1,34 @@
+Step 1:
+Create a constructor, basically an object creator and name it "Circle". Note that it is starting with capital letter, which denotes that it is an object or a constructor, and not any function.
+
+step 2:
+Pass arguments to receive values. (x, y, dx, dy, radius).
+x -> x pixels of offset from left side in x-axis direction
+y -> y pixels of offset from top side in y-axis direction
+dx -> velocity of the element i.e the speed and direction of the element in x-axis
+dy -> velocity of the element i.e the speed and direction of the element in y-axis
+radius -> radius of the circle
+
+step 3:
+pass a method to draw the circle. We will use draw(). This method basically draws the circle.
+
+step 4:
+pass another method to perform various tasks. We will use update() : -
+1. To set conditions to bounce of the screen
+2. To increment the x and y offsets (this.x += this.dx & this.y += this.dy)
+3. To include the draw method, because we gotta draw the circle. Otherwise the update method is of no use.
+Note that, you can arrange the order of these tasks any way you want.
+
+step 5:
+create an empty array and name it "circleArray"
+
+step 6:
+create a for loop for darwing multiple circles. Now insert the values of the arguments of the circle. Also create the circles from the constructor "Circle", and push those circles in the empty array "circleArray".
+Now empty array "circleArray" contains 70 different Circle objects, with independent velocity and offsets.
+
+step 7:
+This is the most important step, which involves series of tasks : -
+1. create a function name animate()
+2. within the function animate() call a method "requestAnimationFrame" and pass "animate function" in its parameter. This will create a loop. (do it within the animate()  function)
+3. make sure to clear the previous circles drawn, otherwise the circles would draw lines.
+4. create a for loop inside the animate() function, to declare the update() method to each of the circles
